@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+.git/
+.claude/
+caveman/
+backend/node_modules/
+*.log
+.env*
+!.env.example

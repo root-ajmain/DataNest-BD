@@ -15,3 +15,5 @@ backend/.env
 *-service-account.json
 .claude/
 caveman/
+
+.vercel
