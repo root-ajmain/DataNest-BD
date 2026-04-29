@@ -35,11 +35,23 @@ const faqs = [
   },
   {
     q: 'Can you integrate WhatsApp with my existing CRM or e-commerce platform?',
-    a: 'Absolutely. We support native integrations with WooCommerce, Shopify, Google Sheets, Zapier, Pabbly, Make (Integromat), and N8N out of the box. For custom CRMs or proprietary systems, we build tailored API integrations scoped to your specific workflow.',
+    a: 'Absolutely. We support native integrations with WooCommerce, Shopify, Zapier, Pabbly, Make (Integromat), and N8N out of the box. For custom CRMs or proprietary systems, we build tailored API integrations scoped to your specific workflow.',
   },
   {
     q: 'What web development technologies do you use?',
     a: 'Our standard stack is Next.js (React), TypeScript, and Tailwind CSS for the frontend, with Node.js or Python backends depending on the project. For e-commerce we work with WooCommerce and Shopify. All projects are optimized for SEO, performance, and mobile-first experience.',
+  },
+  {
+    q: 'What is WhatChimp and why does DataNest BD use it?',
+    a: 'WhatChimp is a globally trusted, Meta-certified WhatsApp Business API platform operating in 90+ countries. DataNest BD is WhatChimp\'s authorized partner in Bangladesh. We bring WhatChimp\'s platform to local businesses with full Bangla-language onboarding, BDT pricing, local payment methods, and dedicated 24/7 support — services WhatChimp\'s global platform does not offer directly in Bangladesh.',
+  },
+  {
+    q: 'Is platform training included in my plan?',
+    a: 'Yes. Every plan includes complete platform training for your team — covering broadcasts, chatbot setup, team inbox management, and integrations. Training is conducted in Bangla or English based on your preference. There is no additional charge.',
+  },
+  {
+    q: 'What technical support is covered under my subscription?',
+    a: 'All platform-related technical issues are covered under your subscription at no extra cost. This includes chatbot errors, integration problems, template rejections, and account issues. Our team handles Meta support escalations on your behalf. Support is available 24/7.',
   },
   {
     q: 'Do you work with businesses outside of Dhaka?',

@@ -21,7 +21,7 @@ const principles = [
 const faqs = [
   {
     q: "What's included in the BDT 500 setup fee?",
-    a: "WhatsApp number onboarding and Meta verification, initial platform configuration, comprehensive training (Bangla/English, 1–2 hours), basic chatbot template installation, and Google Sheets integration. After setup you pay only the monthly platform fee.",
+    a: "WhatsApp number onboarding and Meta verification, initial platform configuration, comprehensive training (Bangla/English, 1–2 hours), and basic chatbot template installation. After setup you pay only the monthly platform fee.",
   },
   {
     q: 'When should I choose Elite over Growth?',

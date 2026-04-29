@@ -54,7 +54,7 @@ export const BUNDLES: Bundle[] = [
     includes: [
       'High-converting landing page',
       'WhatsApp Growth Plan + AI lead qualification',
-      'Google Sheets CRM integration',
+      'CRM integration',
       'Facebook Lead Ads setup'
     ],
     regularPrice: 39000,

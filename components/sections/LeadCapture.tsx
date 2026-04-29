@@ -5,11 +5,10 @@ import { ArrowRight, CheckCircle2, MessageCircle, Phone, Loader2, ChevronDown, C
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const WEB_APP_URL =
-  'https://script.google.com/macros/s/AKfycbxTyH3t2ucvqX0BzReSAr0JieUeEEMjXLcfwKO449w_tFedhJ-oNd-Pus1c2_7xPGY3/exec';
-
 const WHATSAPP_URL =
   'https://wa.me/8801804277420?text=Hi%20DataNest%20BD%2C%20I%20want%20to%20get%20started';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '');
 
 const SERVICES = [
   'WhatsApp Business API',
@@ -169,34 +168,54 @@ export default function LeadCapture() {
     setError('');
     setServiceError(false);
 
-    const payload = {
-      fullName,
-      whatsappNumber,
-      emailAddress,
-      serviceOfInterest: selectedServices,
-      aboutBusiness,
-    };
+    const message = [
+      'Hi DataNest BD, I want to book a free consultation.',
+      `Name: ${fullName}`,
+      `WhatsApp: ${whatsappNumber}`,
+      emailAddress ? `Email: ${emailAddress}` : '',
+      `Services: ${selectedServices.join(', ')}`,
+      aboutBusiness ? `Business details: ${aboutBusiness}` : '',
+    ].filter(Boolean).join('\n');
 
-    try {
-      // Google Apps Script blocks cross-origin responses unless CORS headers are set.
-      // Using mode:'no-cors' + Content-Type:'text/plain' makes it a "simple request"
-      // (no preflight) so the POST actually reaches the sheet.
-      // The response is opaque (unreadable) but the data IS stored.
-      await fetch(WEB_APP_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(payload),
-      });
+    setLoading(true);
 
-      setSuccess(true);
-      form.reset();
-      setSelectedServices([]);
-    } catch {
-      setError('Network error. Please try WhatsApp or email us directly.');
-    } finally {
-      setLoading(false);
+    if (API_URL) {
+      try {
+        const response = await fetch(`${API_URL}/api/contact`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fullName,
+            whatsappNumber,
+            emailAddress,
+            serviceOfInterest: selectedServices,
+            aboutBusiness,
+            source: window.location.href,
+          }),
+        });
+
+        const data = await response.json().catch(() => null);
+
+        if (!response.ok || !data?.success) {
+          throw new Error(data?.error || 'Submission failed');
+        }
+
+        setSuccess(true);
+        form.reset();
+        setSelectedServices([]);
+      } catch {
+        setError('Submission failed. Please try again or contact us on WhatsApp.');
+      } finally {
+        setLoading(false);
+      }
+      return;
     }
+
+    window.open(`https://wa.me/8801804277420?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    setSuccess(true);
+    form.reset();
+    setSelectedServices([]);
+    setLoading(false);
   };
 
   return (

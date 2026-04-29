@@ -9,14 +9,14 @@ const BILLING_OPTIONS = [
   { months: 1, label: 'Monthly', discount: 0 },
   { months: 3, label: '3 Months', discount: 0.05 },
   { months: 6, label: '6 Months', discount: 0.10 },
-  { months: 12, label: '12 Months', discount: 0.10 },
+  { months: 12, label: '12 Months', discount: 0.15 },
 ] as const;
 
 const PLANS = [
   {
     id: 'basic',
     name: 'Basic Plan',
-    monthlyPrice: 2999,
+    monthlyPrice: 3000,
     badge: 'Best to Get Started',
     description: 'Ideal for small businesses or solopreneurs starting with WhatsApp Broadcasting & Automation.',
     highlights: ['Best for new teams', 'Official API-ready setup', '0% markup on Meta charges'],
@@ -40,7 +40,7 @@ const PLANS = [
       'Messaging Template Management',
       'WhatsApp Chat Widget',
       'SMS Broadcasting',
-      'Google Sheets Integration',
+      'CRM Integration',
       'API Integration (Developer)',
       'Outgoing Webhooks',
       'Zapier Integration',
@@ -49,13 +49,15 @@ const PLANS = [
       'N8N Integration',
       'WooCommerce Integration',
       'Shopify Integration',
-      'On-Call Support',
+      '24/7 Free Support',
+      'Platform Training Included',
+      'Technical Issues Covered Under Subscription',
     ],
   },
   {
     id: 'growth',
     name: 'Growth Plan',
-    monthlyPrice: 5499,
+    monthlyPrice: 6000,
     badge: 'MOST POPULAR',
     description: 'Advanced features and higher limits — ideal for growing businesses needing more capabilities.',
     highlights: ['Best for scaling teams', 'Omnichannel support', 'Advanced AI automation'],
@@ -80,7 +82,9 @@ const PLANS = [
       'Custom Webhook Listener',
       'WhatsApp Product Catalog',
       'Remove "Powered by DataNest BD"',
-      'On-Call Support',
+      '24/7 Free Support',
+      'Platform Training Included',
+      'Technical Issues Covered Under Subscription',
     ],
   },
 ] as const;
@@ -122,7 +126,7 @@ export default function WhatsAppPricing() {
             <span className="text-gradient">Pricing</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
-            Official Meta-approved WhatsApp Business API with <strong className="text-emerald-400">0% markup</strong> on Meta conversation charges. Billed monthly or save with longer plans.
+            Official WhatsApp Business API via WhatChimp with <strong className="text-emerald-400">0% markup</strong> on Meta conversation charges. Billed monthly or save with longer plans.
           </p>
         </div>
 
@@ -200,6 +204,7 @@ export default function WhatsAppPricing() {
                       <p className="text-4xl font-black text-white font-heading">
                         {formatBDT(discountedTotal)}
                       </p>
+                      <p className="text-xs text-slate-500 mt-1.5">+ One-Time Setup Fee: BDT 500</p>
                     </div>
                     <div className="text-right">
                       <p className="text-xs text-slate-500">for {billingMonths} month{billingMonths > 1 ? 's' : ''}</p>
@@ -259,8 +264,18 @@ export default function WhatsAppPricing() {
           })}
         </div>
 
-        {/* Meta pricing note */}
+        {/* Setup fee note */}
         <div className="mt-10 max-w-3xl mx-auto">
+          <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex gap-3">
+            <div className="w-1.5 shrink-0 rounded-full bg-slate-600 mt-1" />
+            <p className="text-sm text-slate-400 leading-relaxed">
+              The one-time BDT 500 setup fee covers your complete account configuration, WhatsApp number onboarding, Meta business verification submission, and initial chatbot setup. It is charged once and never again.
+            </p>
+          </div>
+        </div>
+
+        {/* Meta pricing note */}
+        <div className="mt-4 max-w-3xl mx-auto">
           <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex gap-4">
             <Zap className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
             <div>

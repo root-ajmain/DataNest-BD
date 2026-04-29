@@ -174,13 +174,13 @@ public_html/
 
 ## Contact Form
 
-The contact form submits to **Google Sheets** via Apps Script (no server required):
+The contact form submits to the Vercel backend when `NEXT_PUBLIC_API_URL` is configured.
+If no backend URL is configured, it falls back to opening WhatsApp with the lead details.
 
 ```
-Endpoint in: components/sections/LeadCapture.tsx (line ~20)
+Frontend form: components/sections/LeadCapture.tsx
+Backend API: backend/api/index.js
 ```
-
-To update the webhook URL, replace the `SHEET_ENDPOINT` value in that file.
 
 ---
 

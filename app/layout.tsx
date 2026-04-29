@@ -24,11 +24,11 @@ const siteUrl = 'https://www.datanestbd.com';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'DataNest BD — Web Development, AI Automation & WhatsApp API Agency Bangladesh',
+    default: 'DataNest BD — Official WhatChimp Partner Bangladesh | WhatsApp API, AI Automation & Web Development',
     template: '%s | DataNest BD',
   },
   description:
-    'DataNest BD is a premium digital agency in Bangladesh offering Web Development, SaaS Development, AI Automation, Digital Marketing, WhatsApp API integration, and Facebook Business setup. Trusted by 100+ businesses.',
+    "DataNest BD is Bangladesh's authorized WhatChimp partner. Official WhatsApp Business API with 0% markup, 24/7 Bangla support, and BDT pricing from 3,000 Tk/month. Also offering Web Development, SaaS, AI Automation, and Digital Marketing. Trusted by 100+ businesses.",
   keywords: [
     'Web Development Bangladesh',
     'SaaS Development Bangladesh',
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     alternateLocale: 'bn_BD',
     url: siteUrl,
     siteName: 'DataNest BD',
-    title: 'DataNest BD — Web Development, AI Automation & WhatsApp API Agency Bangladesh',
+    title: 'DataNest BD — Official WhatChimp Partner Bangladesh | WhatsApp API, AI Automation & Web Development',
     description:
-      'Premium digital agency in Bangladesh. Web Development, SaaS, AI Agents, Digital Marketing & Official WhatsApp API. Trusted by 100+ businesses.',
+      'Authorized WhatChimp partner in Bangladesh for Official WhatsApp Business API, plus Web Development, SaaS, AI Automation, and Digital Marketing. 24/7 Bangla support, BDT pricing, and 0% Meta markup.',
     images: [
       {
         url: '/og-image.png',
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DataNest BD — Web Development, AI Automation & WhatsApp API',
+    title: 'DataNest BD — Official WhatChimp Partner Bangladesh',
     description:
-      'Premium digital agency in Bangladesh. Web Development, SaaS, AI Agents, Digital Marketing & WhatsApp API.',
+      'Authorized WhatChimp partner in Bangladesh for Official WhatsApp API, Web Development, SaaS, AI Automation, and Digital Marketing.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -94,7 +94,7 @@ const organizationSchema = {
   url: siteUrl,
   logo: 'https://i.ibb.co.com/zhLsDmyc/L1-removebg-preview.png',
   description:
-    'DataNest BD is a premium digital agency in Bangladesh offering Web Development, SaaS, AI Automation, Digital Marketing, and WhatsApp API services.',
+    'DataNest BD is Bangladesh\'s authorized WhatChimp partner — a premium digital agency offering Official WhatsApp Business API, Web Development, SaaS, AI Automation, and Digital Marketing. 24/7 Bangla support, BDT pricing, 0% Meta markup.',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'House:1039, Road:09, Avenue:09, Mirpur-DOHS',
@@ -131,6 +131,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2737234179962845');
+fbq('track', 'PageView');
+            `.trim(),
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=2737234179962845&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}

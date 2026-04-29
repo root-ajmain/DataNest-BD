@@ -15,7 +15,7 @@ const deliverables = [
   { title: 'Facebook Business Page Setup', desc: 'Professional page creation with optimized profile, cover, CTA, services, and business info configured for maximum discoverability.' },
   { title: 'Meta Business Suite Configuration', desc: 'Complete Business Manager setup — ad accounts, pages, pixels, catalogs, and team member roles properly structured from day one.' },
   { title: 'Business Verification', desc: 'We handle the complete Meta business verification process — document preparation, submission, and follow-up until approval.' },
-  { title: 'Facebook Pixel & Conversion API', desc: 'Pixel installation, event tracking setup, CAPI integration, and custom conversion events — accurate attribution across your funnel.' },
+  { title: 'Conversion Tracking Setup', desc: 'Event tracking guidance, CAPI planning, and custom conversion mapping for clearer attribution across your funnel.' },
   { title: 'Ad Account Structure', desc: 'Properly organized campaign structure following Meta best practices — audience setup, placements, and bidding strategy configured.' },
   { title: 'WhatsApp Business Integration', desc: 'Connect your WhatsApp Business account to Facebook Page for Click-to-WhatsApp ads and unified Meta ecosystem management.' },
 ];

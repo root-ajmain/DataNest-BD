@@ -67,7 +67,7 @@ const posts: Post[] = [
       { type: 'h2', text: 'What is the WhatsApp Business API?' },
       {
         type: 'p',
-        text: 'The WhatsApp Business API is the enterprise-grade version of WhatsApp, designed for growing and large businesses. It is not an app you install on a phone. Instead, it connects your business phone number to Meta\'s servers through an approved Business Solution Provider (BSP). DataNest BD is an official Meta-approved BSP in Bangladesh.',
+        text: 'The WhatsApp Business API is the enterprise-grade version of WhatsApp, designed for growing and large businesses. It is not an app you install on a phone. Instead, it connects your business phone number to Meta\'s servers through an approved Business Solution Provider (BSP). DataNest BD provides this through its authorized WhatChimp partnership in Bangladesh.',
       },
       {
         type: 'ul',
@@ -256,7 +256,7 @@ const posts: Post[] = [
       },
       {
         type: 'p',
-        text: 'The AI agent becomes genuinely useful when it can access live data — your product catalog, order management system, CRM, or inventory. DataNest BD integrates AI agents with WooCommerce, Shopify, custom databases, Google Sheets, and most popular CRMs via API.',
+        text: 'The AI agent becomes genuinely useful when it can access live data — your product catalog, order management system, CRM, or inventory. DataNest BD integrates AI agents with WooCommerce, Shopify, custom databases, and most popular CRMs via API.',
       },
       {
         type: 'h3',

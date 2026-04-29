@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown, MessageCircle, ArrowRight } from 'lucide-react';
 const WHATSAPP_URL = 'https://wa.me/8801804277420?text=Hi%20DataNest%20BD%2C%20I%20want%20to%20get%20started';
 
 const services = [
-  { label: 'WhatsApp API', href: '/services/whatsapp-api', desc: 'Official Meta-approved API setup' },
+  { label: 'WhatsApp API', href: '/services/whatsapp-api', desc: 'Authorized WhatChimp partner setup' },
   { label: 'Web Development', href: '/services/web-development', desc: 'Conversion-focused websites & apps' },
   { label: 'SaaS Development', href: '/services/saas-development', desc: 'Full-stack SaaS product builds' },
   { label: 'AI Automation', href: '/services/ai-automation', desc: 'Custom AI agents & workflows' },

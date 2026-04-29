@@ -16,7 +16,7 @@ const features = [
   'Mobile-first design — optimized for all screen sizes and devices',
   'Sub-2-second load speed for maximum ad Quality Score and conversions',
   'A/B testing-ready structure with variant-friendly component architecture',
-  'Integrated analytics (Google Analytics, Meta Pixel, conversion events)',
+  'Integrated conversion tracking and analytics guidance',
   'WhatsApp click-to-chat integration for instant lead capture',
   'SEO-optimized even for single-page campaign landing pages',
   'Delivered in 5–7 business days for standard campaigns',

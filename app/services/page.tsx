@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const services = [
   {
     icon: MessageSquare, label: 'WhatsApp API', href: '/services/whatsapp-api',
-    headline: 'Official WhatsApp Business API',
-    desc: 'Meta-approved API setup with AI chatbot, bulk messaging, team inbox, 0% markup on Meta charges. Live in 48 hours.',
-    tags: ['Bulk Broadcast', 'AI Chatbot', 'CRM Integration', '0% Markup'],
+    headline: 'Official WhatsApp API via WhatChimp',
+    desc: 'Authorized WhatChimp partner setup with AI chatbot, bulk messaging, team inbox, platform training, Bangla support, and 0% markup on Meta charges. Live in 48 hours.',
+    tags: ['WhatChimp Partner', 'AI Chatbot', 'CRM Integration', '0% Markup'],
     badge: 'Most Popular',
     badgeColor: 'badge-emerald',
     color: 'text-emerald-400', bg: 'bg-emerald-500/15 border-emerald-500/25', accent: 'border-emerald-500/20',

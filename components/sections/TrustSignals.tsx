@@ -1,4 +1,4 @@
-import { ShieldCheck, Star, Users, Zap, Award, Clock } from 'lucide-react';
+import { ShieldCheck, Star, Users, Zap, Award, Clock, Globe } from 'lucide-react';
 
 const stats = [
   { value: '100+', label: 'Happy Clients', icon: Users, color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20' },
@@ -6,11 +6,12 @@ const stats = [
   { value: '340%', label: 'Average ROI', icon: Star, color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20' },
   { value: '48h', label: 'Fast Onboarding', icon: Clock, color: 'text-purple-400', bg: 'bg-purple-500/10 border-purple-500/20' },
   { value: '99%', label: 'Client Retention', icon: Award, color: 'text-cyan-400', bg: 'bg-cyan-500/10 border-cyan-500/20' },
+  { value: '90+', label: 'Countries on WhatChimp Platform', icon: Globe, color: 'text-emerald-300', bg: 'bg-emerald-500/10 border-emerald-500/20' },
   { value: '24/7', label: 'Support Available', icon: ShieldCheck, color: 'text-pink-400', bg: 'bg-pink-500/10 border-pink-500/20' },
 ];
 
 const trustedTech = [
-  { name: 'Meta / WhatsApp', desc: 'Official BSP' },
+  { name: 'WhatChimp', desc: 'Authorized Partner' },
   { name: 'Next.js', desc: 'Frontend' },
   { name: 'OpenAI', desc: 'AI Models' },
   { name: 'Shopify', desc: 'E-commerce' },
@@ -28,7 +29,7 @@ export default function TrustSignals() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-14">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 mb-14">
           {stats.map(({ value, label, icon: Icon, color, bg }) => (
             <div
               key={label}

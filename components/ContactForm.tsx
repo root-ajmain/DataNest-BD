@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://your-backend.vercel.app';
+const WHATSAPP_NUMBER = '8801804277420';
+const API_URL = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '');
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,26 +22,50 @@ export default function ContactForm() {
     setLoading(true);
     setError('');
 
-    try {
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+    const message = [
+      'Hi DataNest BD, I want to book a free consultation.',
+      `Name: ${formData.name}`,
+      `WhatsApp: ${formData.whatsapp}`,
+      formData.email ? `Email: ${formData.email}` : '',
+      `Service: ${formData.service}`,
+      formData.message ? `Business details: ${formData.message}` : '',
+    ].filter(Boolean).join('\n');
 
-      const data = await response.json();
+    if (API_URL) {
+      try {
+        const response = await fetch(`${API_URL}/api/contact`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: formData.name,
+            whatsapp: formData.whatsapp,
+            email: formData.email,
+            service: formData.service,
+            message: formData.message,
+            source: window.location.href,
+          }),
+        });
 
-      if (data.success) {
+        const data = await response.json().catch(() => null);
+
+        if (!response.ok || !data?.success) {
+          throw new Error(data?.error || 'Submission failed');
+        }
+
         setSuccess(true);
         setFormData({ name: '', whatsapp: '', email: '', service: '', message: '' });
-      } else {
-        setError('Submission failed. Please try again.');
+      } catch {
+        setError('Submission failed. Please WhatsApp us at +880 1804 277420');
+      } finally {
+        setLoading(false);
       }
-    } catch {
-      setError('Something went wrong. Please WhatsApp us at +880 1804 277420');
-    } finally {
-      setLoading(false);
+      return;
     }
+
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    setSuccess(true);
+    setFormData({ name: '', whatsapp: '', email: '', service: '', message: '' });
+    setLoading(false);
   };
 
   if (success) {

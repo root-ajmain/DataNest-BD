@@ -18,8 +18,8 @@ export const SERVICES: Service[] = [
     name: 'WhatsApp Business API',
     slug: 'whatsapp-api',
     icon: '💬',
-    shortDescription: 'Official Meta-approved API with bulk messaging, AI chatbots, and team inbox',
-    longDescription: 'Set up Meta-approved WhatsApp API with chatbots, bulk messaging, team inbox, and CRM integrations. 0% markup on Meta charges.',
+    shortDescription: 'Authorized WhatChimp partner for official WhatsApp API, AI chatbots, and team inbox',
+    longDescription: 'Get the official WhatsApp API through DataNest BD, Bangladesh\'s authorized WhatChimp partner, with chatbots, bulk messaging, team inbox, CRM integrations, 24/7 Bangla support, and 0% markup on Meta charges.',
     pricing: {
       starting: 3000,
       model: '/month'
@@ -27,7 +27,8 @@ export const SERVICES: Service[] = [
     features: [
       '48-hour setup guarantee',
       '0% markup on Meta charges',
-      'Custom AI agent development',
+      'Authorized WhatChimp partner',
+      'Platform training included',
       'Bulk messaging & broadcasts',
       'Multi-agent team inbox',
       'CRM integrations'
@@ -141,7 +142,7 @@ export const SERVICES: Service[] = [
     },
     features: [
       'Meta Business verification',
-      'Facebook Pixel installation',
+      'Conversion tracking guidance',
       'Ad account structure',
       'Catalog setup',
       'Domain verification',

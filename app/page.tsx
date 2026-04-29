@@ -4,6 +4,7 @@ import TrustSignals from '@/components/sections/TrustSignals';
 import ServicesSection from '@/components/sections/ServicesSection';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import ProcessSection from '@/components/sections/ProcessSection';
+import WhatChimpPartnership from '@/components/sections/WhatChimpPartnership';
 import WhatsAppPricing from '@/components/sections/WhatsAppPricing';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQSection from '@/components/sections/FAQSection';
@@ -11,12 +12,12 @@ import LeadCapture from '@/components/sections/LeadCapture';
 import FinalCTA from '@/components/sections/FinalCTA';
 
 export const metadata: Metadata = {
-  title: 'DataNest BD — Web Development, AI Automation & WhatsApp API Agency Bangladesh',
+  title: 'DataNest BD — Official WhatChimp Partner Bangladesh | WhatsApp API, AI Automation & Web Development',
   description:
-    'Bangladesh\'s premier digital agency for Web Development, SaaS, AI Automation, Digital Marketing, and Official WhatsApp Business API. Trusted by 100+ businesses. Book a free consultation today.',
+    "DataNest BD is Bangladesh's authorized WhatChimp partner. Get the official WhatsApp Business API with 0% markup, 24/7 local support in Bangla, platform training included, and BDT pricing from 3,000 Tk/month. 48-hour setup guaranteed.",
   openGraph: {
-    title: 'DataNest BD — Web Development, AI Automation & WhatsApp API',
-    description: 'Build. Automate. Grow 10X Faster. Bangladesh\'s leading digital agency for WhatsApp API, Web Dev, AI & Marketing.',
+    title: 'DataNest BD — Official WhatChimp Partner Bangladesh | WhatsApp API, AI Automation & Web Development',
+    description: "Authorized WhatChimp partner in Bangladesh. Official WhatsApp API, AI Automation & Web Development. 0% Meta markup, 24/7 Bangla support, BDT pricing from 3,000 Tk/month.",
     url: 'https://www.datanestbd.com',
   },
   alternates: {
@@ -30,6 +31,7 @@ const homepageSchema = {
   '@id': 'https://www.datanestbd.com/#organization',
   name: 'DataNest BD',
   url: 'https://www.datanestbd.com',
+  description: 'Authorized WhatChimp partner in Bangladesh offering official WhatsApp Business API, AI automation, web development, and digital marketing. 24/7 Bangla support, BDT pricing, 0% Meta markup.',
   telephone: '+8801804277420',
   email: 'info@datanestbd.com',
   address: {
@@ -39,7 +41,7 @@ const homepageSchema = {
     postalCode: '1216',
     addressCountry: 'BD',
   },
-  priceRange: '৳৳',
+  priceRange: 'BDT 3,000 - BDT 6,000/month',
   openingHours: 'Mo-Sa 09:00-20:00',
   serviceArea: { '@type': 'Country', name: 'Bangladesh' },
   hasOfferCatalog: {
@@ -67,6 +69,7 @@ export default function HomePage() {
       <TrustSignals />
       <ServicesSection />
       <WhyChooseUs />
+      <WhatChimpPartnership />
       <ProcessSection />
       <WhatsAppPricing />
       <Testimonials />

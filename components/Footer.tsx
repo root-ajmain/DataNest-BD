@@ -159,9 +159,9 @@ export default function Footer() {
             <div className="mt-6 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]">
               <div className="flex items-center gap-2 mb-1.5">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-xs font-semibold text-emerald-400">Official WhatsApp Partner</span>
+                <span className="text-xs font-semibold text-emerald-400">Authorized WhatChimp Partner</span>
               </div>
-              <p className="text-xs text-slate-500">Meta-approved Business Solution Provider for Bangladesh businesses.</p>
+              <p className="text-xs text-slate-500">Official WhatsApp API platform support for Bangladesh businesses.</p>
             </div>
           </div>
         </div>
@@ -170,7 +170,16 @@ export default function Footer() {
         <div className="mt-14 pt-8 border-t border-white/[0.06]">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-slate-500">
-              &copy; {new Date().getFullYear()} DataNest BD. All rights reserved. Powered by WhatChimp.
+              &copy; {new Date().getFullYear()} DataNest BD. All rights reserved. Authorized WhatChimp Partner for Bangladesh —{' '}
+              <a
+                href="https://whatchimp.com"
+                target="_blank"
+                rel="noopener"
+                className="hover:text-slate-300 transition-colors"
+              >
+                WhatChimp
+              </a>{' '}
+              is a Meta-certified WhatsApp API platform trusted in 90+ countries.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-500">
               <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>

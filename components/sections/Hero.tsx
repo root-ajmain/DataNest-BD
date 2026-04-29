@@ -22,13 +22,22 @@ export default function Hero() {
 
           {/* Left: Content */}
           <div className="text-center lg:text-left">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 section-label mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              Official WhatsApp Business API Provider — Bangladesh
+            {/* Badges */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 section-label">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                </span>
+                Official Meta Partner
+              </div>
+              <div className="inline-flex items-center gap-2 section-label">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+                </span>
+                Authorized WhatChimp Partner · Bangladesh
+              </div>
             </div>
 
             {/* Headline */}

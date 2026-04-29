@@ -36,10 +36,12 @@ export const WHATSAPP_PRICING: PricingPlan[] = [
         'Bulk WhatsApp Messaging',
         'Drag & Drop Chatbot Builder',
         'WhatsApp Chat Widget',
-        'Google Sheets Integration',
+        'CRM Integration',
         'Campaign Reporting',
         'Unlimited Message Credits',
-        'On-Call Support'
+        '24/7 Free Support',
+        'Platform Training Included',
+        'Technical Issues Covered Under Subscription'
       ],
       excluded: [
         'AI Agent (paid add-on: BDT 15K-40K)',
@@ -74,6 +76,9 @@ export const WHATSAPP_PRICING: PricingPlan[] = [
         'Roles and Permissions',
         'Click to WhatsApp Ad Integration',
         'WhatsApp Product Catalog',
+        '24/7 Free Support',
+        'Platform Training Included',
+        'Technical Issues Covered Under Subscription',
         'All Basic Plan Features'
       ],
       excluded: [

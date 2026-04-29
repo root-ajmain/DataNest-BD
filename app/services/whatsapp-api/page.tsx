@@ -5,17 +5,18 @@ import {
   Bot, BarChart3, Smartphone, MessageSquare, Globe,
 } from 'lucide-react';
 import WhatsAppPricing from '@/components/sections/WhatsAppPricing';
+import WhatChimpPartnership from '@/components/sections/WhatChimpPartnership';
 import FAQSection from '@/components/sections/FAQSection';
 import LeadCapture from '@/components/sections/LeadCapture';
 
 export const metadata: Metadata = {
-  title: 'WhatsApp Business API Bangladesh — Official Meta-Approved Setup | DataNest BD',
+  title: 'WhatsApp Business API Bangladesh — Authorized WhatChimp Partner | DataNest BD',
   description:
-    'Official WhatsApp Business API setup in Bangladesh. Bulk messaging, AI chatbot, team inbox, 0% markup on Meta charges. Get onboarded in 48 hours. Book a free consultation.',
+    'Authorized WhatChimp reseller in Bangladesh. Official WhatsApp API setup with 0% Meta markup, 24/7 Bangla support, platform training, and full technical coverage. Basic plan from BDT 3,000/month + BDT 500 one-time setup.',
   keywords: ['WhatsApp API Bangladesh', 'WhatsApp Business API', 'WhatsApp chatbot Bangladesh', 'WhatsApp bulk messaging Bangladesh', 'Meta approved WhatsApp BSP Bangladesh'],
   openGraph: {
-    title: 'WhatsApp Business API Bangladesh — Official Meta Setup | DataNest BD',
-    description: 'Official WhatsApp Business API with 0% markup, AI chatbot, bulk messaging & team inbox. Live in 48 hours.',
+    title: 'WhatsApp Business API Bangladesh — Authorized WhatChimp Partner | DataNest BD',
+    description: 'Authorized WhatChimp partner in Bangladesh. Official WhatsApp API, 0% markup, 24/7 Bangla support, platform training. BDT 3,000/month. Live in 48 hours.',
     url: 'https://www.datanestbd.com/services/whatsapp-api',
   },
   alternates: { canonical: 'https://www.datanestbd.com/services/whatsapp-api' },
@@ -62,7 +63,7 @@ const features = [
   {
     icon: Globe,
     title: 'Deep Integrations',
-    desc: 'Connect with WooCommerce, Shopify, Google Sheets, Zapier, Pabbly, Make, N8N, and custom APIs for complete automation.',
+    desc: 'Connect with WooCommerce, Shopify, Zapier, Pabbly, Make, N8N, and custom APIs for complete automation.',
     color: 'text-pink-400',
     bg: 'bg-pink-500/10 border-pink-500/20',
   },
@@ -98,20 +99,20 @@ const serviceSchema = {
     url: 'https://www.datanestbd.com',
   },
   serviceType: 'WhatsApp API Integration',
-  description: 'Official Meta-approved WhatsApp Business API setup with bulk messaging, AI chatbot, team inbox, and CRM integrations for Bangladesh businesses.',
+  description: 'Authorized WhatChimp reseller in Bangladesh offering official WhatsApp Business API setup with bulk messaging, AI chatbot, team inbox, CRM integrations, 0% Meta markup, 24/7 Bangla support, platform training, full technical coverage, BDT pricing from 3,000/month, and a BDT 500 one-time setup fee.',
   areaServed: 'Bangladesh',
   offers: [
     {
       '@type': 'Offer',
       name: 'Basic WhatsApp API Plan',
-      price: '2999',
+      price: '3000',
       priceCurrency: 'BDT',
       description: 'Basic WhatsApp Business API with 2 agents, 10,000 subscribers, and full automation.',
     },
     {
       '@type': 'Offer',
       name: 'Growth WhatsApp API Plan',
-      price: '5499',
+      price: '6000',
       priceCurrency: 'BDT',
       description: 'Advanced WhatsApp Business API with omnichannel inbox, 5 agents, 20,000 subscribers.',
     },
@@ -145,7 +146,7 @@ export default function WhatsAppAPIPage() {
 
             <div className="section-label mb-5">
               <ShieldCheck className="w-4 h-4" />
-              Official Meta-Approved WhatsApp BSP
+              Authorized WhatChimp Partner
             </div>
 
             <h1 className="text-5xl sm:text-6xl font-black text-white font-heading leading-[1.1] mb-6">
@@ -154,7 +155,7 @@ export default function WhatsAppAPIPage() {
             </h1>
 
             <p className="text-xl text-slate-400 leading-relaxed mb-8 max-w-2xl">
-              Set up your official WhatsApp Business API with bulk messaging, AI chatbot, team inbox, and deep integrations — live in <strong className="text-white">48 hours</strong>. We charge <strong className="text-emerald-400">0% markup</strong> on Meta conversation fees.
+              Set up your official WhatsApp Business API through DataNest BD, Bangladesh&apos;s authorized WhatChimp partner, with bulk messaging, AI chatbot, team inbox, and deep integrations — live in <strong className="text-white">48 hours</strong>. We charge <strong className="text-emerald-400">0% markup</strong> on Meta conversation fees.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -168,7 +169,7 @@ export default function WhatsAppAPIPage() {
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-3 mt-8">
-              {['Official Meta BSP', '0% Markup on Meta Fees', '48hr Onboarding', 'Bangla Support'].map((badge) => (
+              {['Authorized WhatChimp Partner', '0% Markup on Meta Fees', '48hr Onboarding', 'Bangla Support'].map((badge) => (
                 <div key={badge} className="flex items-center gap-1.5 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-full">
                   <Check className="w-3.5 h-3.5" />
                   {badge}
@@ -275,6 +276,9 @@ export default function WhatsAppAPIPage() {
           </div>
         </div>
       </section>
+
+      {/* WhatChimp Partnership */}
+      <WhatChimpPartnership />
 
       {/* Pricing — EXACT DATA PRESERVED */}
       <WhatsAppPricing />

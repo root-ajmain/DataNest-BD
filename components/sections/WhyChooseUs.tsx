@@ -12,7 +12,7 @@ const reasons = [
   {
     icon: Headset,
     title: 'Dedicated Bangladeshi Support Team',
-    desc: 'A local expert team that speaks your language — literally. We provide support in Bangla and English, and we know the unique challenges of the Bangladesh market.',
+    desc: 'Our local expert team provides 24/7 support in Bangla and English — calls, WhatsApp, and chat. Every plan includes full platform training for your team and technical issue resolution under your subscription. You never pay extra for support.',
     color: 'text-blue-400',
     bg: 'bg-blue-500/10 border-blue-500/20',
   },
