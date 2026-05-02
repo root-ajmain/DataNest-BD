@@ -41,9 +41,10 @@ export default function Footer() {
               <div className="w-12 h-12 rounded-xl bg-white/95 p-1.5 border border-white/80 flex items-center justify-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://i.ibb.co.com/zhLsDmyc/L1-removebg-preview.png"
+                  src="https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png"
                   alt="DataNest BD Logo"
                   className="w-full h-full object-contain"
+                  loading="lazy"
                   referrerPolicy="no-referrer"
                 />
               </div>

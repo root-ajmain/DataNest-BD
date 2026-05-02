@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
+import DiscountPopup from '@/components/DiscountPopup';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -79,8 +80,12 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: [{ url: '/favicon.ico' }, { url: '/icon-192.png', sizes: '192x192', type: 'image/png' }],
-    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    icon: [
+      { url: 'https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png', type: 'image/png' },
+      { url: 'https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png', sizes: '192x192', type: 'image/png' },
+    ],
+    apple: [{ url: 'https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: 'https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png',
   },
   verification: {
     google: 'your-google-verification-code',
@@ -92,7 +97,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'DataNest BD',
   url: siteUrl,
-  logo: 'https://i.ibb.co.com/zhLsDmyc/L1-removebg-preview.png',
+  logo: 'https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png',
   description:
     'DataNest BD is Bangladesh\'s authorized WhatChimp partner — a premium digital agency offering Official WhatsApp Business API, Web Development, SaaS, AI Automation, and Digital Marketing. 24/7 Bangla support, BDT pricing, 0% Meta markup.',
   address: {
@@ -134,6 +139,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           dangerouslySetInnerHTML={{
             __html: `
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W2HGL77K');
+            `.trim(),
+          }}
+        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGXYESRW6G" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-GGXYESRW6G');
+            `.trim(),
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -164,14 +191,28 @@ fbq('track', 'PageView');
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <link rel="icon" href="https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png" type="image/png" sizes="96x96" />
+        <link rel="shortcut icon" href="https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/zhLsDmyc/L1-removebg-preview.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="bg-[#0F172A] antialiased">
+      <body className="bg-[#0F172A] antialiased" suppressHydrationWarning>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W2HGL77K"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         <Navbar />
         <main>{children}</main>
         <Footer />
         <FloatingWhatsApp />
+        <DiscountPopup />
       </body>
     </html>
   );

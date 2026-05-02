@@ -10,6 +10,22 @@ const WHATSAPP_URL =
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '');
 
+const SHEETS_URL =
+  'https://script.google.com/macros/s/AKfycbzsJiiht4Xm1NAFcmClJVnnG0NL5ZvMLjxx49iP97zT_Rm8Q8MyKktO-_geJpGbfb9R/exec';
+
+async function submitToSheets(payload: Record<string, unknown>) {
+  try {
+    await fetch(SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors', // Apps Script doesn't send CORS headers on redirect
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+  } catch {
+    // non-blocking — sheet submission failure should not block user
+  }
+}
+
 const SERVICES = [
   'WhatsApp Business API',
   'Web Development',
@@ -168,6 +184,15 @@ export default function LeadCapture() {
     setError('');
     setServiceError(false);
 
+    const payload = {
+      fullName,
+      whatsappNumber,
+      emailAddress,
+      serviceOfInterest: selectedServices,
+      aboutBusiness,
+      source: window.location.href,
+    };
+
     const message = [
       'Hi DataNest BD, I want to book a free consultation.',
       `Name: ${fullName}`,
@@ -177,21 +202,15 @@ export default function LeadCapture() {
       aboutBusiness ? `Business details: ${aboutBusiness}` : '',
     ].filter(Boolean).join('\n');
 
-    setLoading(true);
+    // Always fire Google Sheets capture (non-blocking)
+    submitToSheets(payload);
 
     if (API_URL) {
       try {
         const response = await fetch(`${API_URL}/api/contact`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            fullName,
-            whatsappNumber,
-            emailAddress,
-            serviceOfInterest: selectedServices,
-            aboutBusiness,
-            source: window.location.href,
-          }),
+          body: JSON.stringify(payload),
         });
 
         const data = await response.json().catch(() => null);
@@ -211,6 +230,7 @@ export default function LeadCapture() {
       return;
     }
 
+    // No backend — open WhatsApp as fallback
     window.open(`https://wa.me/8801804277420?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     setSuccess(true);
     form.reset();

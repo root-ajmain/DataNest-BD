@@ -44,6 +44,7 @@ const config: Config = {
         'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
         'slide-up': 'slideUp 0.5s ease-out forwards',
         'count-up': 'countUp 2s ease-out forwards',
+        'slide-in': 'slideIn 0.4s ease-out forwards',
       },
       keyframes: {
         fadeUp: {
@@ -65,6 +66,10 @@ const config: Config = {
         countUp: {
           '0%': { opacity: '0', transform: 'translateY(8px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideIn: {
+          '0%': { opacity: '0', transform: 'translateX(32px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
         },
       },
       transitionTimingFunction: {

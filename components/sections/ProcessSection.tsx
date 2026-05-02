@@ -66,9 +66,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          {/* Connecting lines (desktop) */}
-          <div className="hidden lg:block absolute top-10 left-[25%] right-[25%] h-0.5 bg-gradient-to-r from-blue-500/20 via-emerald-500/20 to-amber-500/20 pointer-events-none" style={{ top: '44px' }} />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {steps.map(({ number, icon: Icon, title, desc, detail, color, bg }) => (
             <div key={number} className="relative group">

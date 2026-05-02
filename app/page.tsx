@@ -1,15 +1,18 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Hero from '@/components/sections/Hero';
 import TrustSignals from '@/components/sections/TrustSignals';
 import ServicesSection from '@/components/sections/ServicesSection';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import ProcessSection from '@/components/sections/ProcessSection';
 import WhatChimpPartnership from '@/components/sections/WhatChimpPartnership';
-import WhatsAppPricing from '@/components/sections/WhatsAppPricing';
-import Testimonials from '@/components/sections/Testimonials';
-import FAQSection from '@/components/sections/FAQSection';
-import LeadCapture from '@/components/sections/LeadCapture';
-import FinalCTA from '@/components/sections/FinalCTA';
+
+// Below-fold sections loaded lazily
+const WhatsAppPricing    = dynamic(() => import('@/components/sections/WhatsAppPricing'));
+const Testimonials       = dynamic(() => import('@/components/sections/Testimonials'));
+const FAQSection         = dynamic(() => import('@/components/sections/FAQSection'));
+const LeadCapture        = dynamic(() => import('@/components/sections/LeadCapture'));
+const FinalCTA           = dynamic(() => import('@/components/sections/FinalCTA'));
 
 export const metadata: Metadata = {
   title: 'DataNest BD — Official WhatChimp Partner Bangladesh | WhatsApp API, AI Automation & Web Development',
